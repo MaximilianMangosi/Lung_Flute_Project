@@ -4,26 +4,26 @@ import { FadeIn } from "@/components/FadeIn";
 
 // TODO: replace with real metadata
 export const metadata: Metadata = {
-  title: "Lung Flute ECO: Breathing New Life into TB Treatment",
+  title: "Lung Flute ECO: Breathing New Life into Tuberculosis Treatment",
 };
 
 // TODO: replace with real statistics
 const stats = [
   {
     value: "10M+",
-    label: "New TB infections per year globally",
+    label: "New Tuberculosis infections per year globally",
   },
   {
     value: "#2",
     label: "Leading infectious disease killer worldwide",
   },
   {
-    value: "1.25M",
-    label: "TB-related deaths in 2023",
+    value: "1.23M",
+    label: "Tuberculosis-related deaths in 2024",
   },
   {
-    value: "87%",
-    label: "Of cases in just 30 high-burden countries",
+    value: "2.7M+",
+    label: "Of patients go undiagnosed",
   },
 ];
 
@@ -37,7 +37,7 @@ const benefits = [
   {
     title: "Improves sputum yield",
     description:
-      "Enhances mucus mobilisation to boost diagnostic sample quality for faster, more accurate TB detection.",
+      "Enhances sputum mobilisation to boost diagnostic sample quality for faster, more accurate Tuberculosis detection.",
   },
   {
     title: "Easy for any patient",
@@ -60,7 +60,7 @@ export default function HomePage() {
           <div className="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full bg-[#0D9488] blur-3xl" />
           <div className="absolute -bottom-32 -left-32 w-[400px] h-[400px] rounded-full bg-[#0D9488] blur-3xl" />
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 md:py-40">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-24">
           <FadeIn>
             {/* TODO: replace with real tagline */}
             <p className="text-[#0D9488] font-semibold text-sm uppercase tracking-widest mb-4">
@@ -78,8 +78,9 @@ export default function HomePage() {
             {/* TODO: replace with real subtitle */}
             <p className="text-white/70 text-lg sm:text-xl max-w-2xl mb-10 leading-relaxed">
               The Lung Flute ECO is a compact, drug-free acoustic airway
-              clearance device designed to improve TB diagnosis and treatment
-              adherence, especially in the communities that need it most.
+              clearance device designed to improve Tuberculosis diagnosis and
+              treatment adherence, especially in the communities that need it
+              most.
             </p>
           </FadeIn>
           <FadeIn delay={0.3}>
@@ -115,10 +116,10 @@ export default function HomePage() {
               </h2>
             </div>
           </FadeIn>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
             {stats.map((stat, i) => (
-              <FadeIn key={stat.label} delay={i * 0.08}>
-                <div className="border border-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow duration-200">
+              <FadeIn key={stat.label} delay={i * 0.08} className="h-full">
+                <div className="border border-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow duration-200 h-full flex flex-col justify-center">
                   <div className="text-4xl font-extrabold text-[#0D9488] mb-2">
                     {stat.value}
                   </div>
@@ -151,7 +152,7 @@ export default function HomePage() {
                   between 16 and 22 Hz, to reach the deepest regions of the
                   lungs. When a patient exhales through the device, a calibrated
                   internal reed vibrates, generating these waves to loosen and
-                  thin mucus in the airways.
+                  thin sputum in the airways.
                 </p>
                 <p className="text-gray-600 text-base leading-relaxed mb-8">
                   Unlike conventional airway clearance techniques, the Lung
@@ -191,11 +192,11 @@ export default function HomePage() {
                   >
                     <div className="w-[90%] h-[76%] bg-gray-100 rounded-full shadow-lg scale-105" />
                   </div>
-                  <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-xl">
+                  <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-xl group">
                     <img
                       src="http://lf-eco.acoustic-innov.com/wp/wp-content/uploads/2024/07/LFECO_main-1.jpg"
                       alt="Lung Flute ECO product"
-                      className="object-cover w-full h-full"
+                      className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
                     />
                   </div>
                 </div>
@@ -222,7 +223,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((b, i) => (
               <FadeIn key={b.title} delay={i * 0.08}>
-                <div className="border border-gray-100 rounded-2xl p-6 hover:shadow-md transition-shadow duration-200 h-full">
+                <div className="border border-gray-300 rounded-2xl p-6 hover:shadow-md transition-shadow duration-200 h-full">
                   <h3 className="font-bold text-[#0A1628] mb-2">{b.title}</h3>
                   <p className="text-sm text-gray-500 leading-relaxed">
                     {b.description}
@@ -247,11 +248,11 @@ export default function HomePage() {
               life saved.
             </h2>
             <p className="text-white/65 text-lg leading-relaxed">
-              TB is curable. Yet millions go undiagnosed every year because
-              current sputum collection methods fail patients who cannot produce
-              adequate samples. The Lung Flute ECO addresses this gap directly,
-              giving clinicians the evidence they need to act, and patients the
-              treatment they deserve.
+              Tuberculosis is curable. Yet millions go undiagnosed every year
+              because current sputum collection methods fail patients who cannot
+              produce adequate samples. The Lung Flute ECO addresses this gap
+              directly, giving clinicians the evidence they need to act, and
+              patients the treatment they deserve.
             </p>
           </FadeIn>
         </div>
@@ -267,11 +268,14 @@ export default function HomePage() {
               </p>
               {/* TODO: replace with real section heading */}
               <h2 className="text-3xl sm:text-4xl font-bold text-[#0A1628]">
-                Watch how it works
+                Video Demonstration
               </h2>
             </div>
             {/* TODO: replace src with real YouTube embed URL */}
-            <div className="relative w-full rounded-2xl overflow-hidden shadow-xl" style={{ paddingBottom: "56.25%" }}>
+            <div
+              className="relative w-full rounded-2xl overflow-hidden shadow-xl"
+              style={{ paddingBottom: "56.25%" }}
+            >
               <iframe
                 className="absolute inset-0 w-full h-full"
                 src="https://www.youtube.com/embed/5FfCpCaITmo"
@@ -288,19 +292,18 @@ export default function HomePage() {
       <section className="bg-[#0D9488] py-16 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>
-            {/* TODO: replace with real CTA content */}
             <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-              Interested in collaborating or learning more?
+              Interested in learning more? Explore our latest research.
             </h2>
             <p className="text-white/80 mb-8 text-base">
-              Whether you are a clinician, researcher, NGO, or distributor, we
-              would love to hear from you.
+              Discover how the Lung Flute is being used in research and clinical
+              settings worldwide.
             </p>
             <Link
-              href="/contact"
+              href="/studies"
               className="bg-white text-[#0D9488] font-bold px-8 py-3.5 rounded-lg hover:bg-gray-50 transition-colors duration-200 text-sm inline-block"
             >
-              Contact us
+              Studies &amp; Applications
             </Link>
           </FadeIn>
         </div>

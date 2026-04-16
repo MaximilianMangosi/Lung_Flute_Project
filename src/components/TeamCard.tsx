@@ -3,18 +3,12 @@
 import { useState, useEffect } from "react";
 import type { TeamMember } from "@/data/team";
 
-const COLLAPSED_LENGTH = 180;
-
 interface TeamCardProps {
   member: TeamMember;
 }
 
 export function TeamCard({ member }: TeamCardProps) {
   const [open, setOpen] = useState(false);
-  const needsTruncation = member.bio.length > COLLAPSED_LENGTH;
-  const preview = needsTruncation
-    ? member.bio.slice(0, COLLAPSED_LENGTH).trimEnd() + "..."
-    : member.bio;
 
   // Lock body scroll while modal is open
   useEffect(() => {
@@ -31,35 +25,34 @@ export function TeamCard({ member }: TeamCardProps) {
   return (
     <>
       {/* Card */}
-      <div className="flex flex-col border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 h-full">
-        {/* Photo */}
-        <div className="relative w-full aspect-square bg-gray-50">
+      <div className="flex flex-col items-center border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 bg-white">
+        {/* Photo — circular crop to reduce graininess appearance */}
+        <div className="w-28 h-28 mt-6 rounded-full overflow-hidden bg-gray-100 shrink-0 ring-4 ring-[#0D9488]/20">
           <img
             src={member.photo}
             alt={`Photo of ${member.name}`}
-            className="object-cover w-full h-full absolute inset-0"
+            className="object-cover w-full h-full"
           />
         </div>
 
         {/* Info */}
-        <div className="flex flex-col flex-1 p-6">
-          <h2 className="font-bold text-[#0A1628] text-lg mb-1">
+        <div className="flex flex-col items-center text-center px-5 py-5 w-full">
+          {/* Department subtitle */}
+          <span className="text-xs font-semibold uppercase tracking-widest text-[#0D9488] mb-1">
+            {member.department}
+          </span>
+          <h2 className="font-bold text-[#0A1628] text-base mb-0.5">
             {member.name}
           </h2>
-          <p className="text-[#0D9488] font-semibold text-sm mb-3">
+          <p className="text-gray-400 text-xs leading-snug mb-4">
             {member.title}
           </p>
-          <p className="text-gray-500 text-sm leading-relaxed flex-1">
-            {preview}
-          </p>
-          {needsTruncation && (
-            <button
-              onClick={() => setOpen(true)}
-              className="mt-3 self-start text-[#0D9488] font-semibold text-sm hover:text-[#14B8A8] transition-colors duration-150"
-            >
-              Read more
-            </button>
-          )}
+          <button
+            onClick={() => setOpen(true)}
+            className="text-xs font-semibold text-white bg-[#0D9488] hover:bg-[#14B8A8] px-4 py-1.5 rounded-lg transition-colors duration-150"
+          >
+            View profile
+          </button>
         </div>
       </div>
 
@@ -95,10 +88,13 @@ export function TeamCard({ member }: TeamCardProps) {
 
             {/* Content */}
             <div className="p-6">
-              <h2 className="font-bold text-[#0A1628] text-xl mb-1">
+              <span className="text-xs font-semibold uppercase tracking-widest text-[#0D9488]">
+                {member.department}
+              </span>
+              <h2 className="font-bold text-[#0A1628] text-xl mt-1 mb-0.5">
                 {member.name}
               </h2>
-              <p className="text-[#0D9488] font-semibold text-sm mb-4">
+              <p className="text-gray-400 font-semibold text-sm mb-4">
                 {member.title}
               </p>
               <p className="text-gray-600 text-sm leading-relaxed">

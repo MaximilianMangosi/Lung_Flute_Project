@@ -12,7 +12,7 @@ const inter = Inter({
 // TODO: replace with real metadata
 export const metadata: Metadata = {
   title: {
-    default: "Lung Flute ECO: TB Treatment Innovation",
+    default: "Lung Flute ECO: Tuberculosis Treatment Innovation",
     template: "%s | Lung Flute ECO",
   },
   description:

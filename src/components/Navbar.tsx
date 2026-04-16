@@ -8,6 +8,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/team", label: "Team" },
   { href: "/studies", label: "Studies & Applications" },
+  { href: "/flutte", label: "FLUTTE" },
   { href: "/history", label: "History" },
   { href: "/partners", label: "Partners" },
   { href: "/contact", label: "Contact" },
@@ -39,7 +40,7 @@ export function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-150 ${
+                  className={`px-3 py-2 rounded-md text-base font-semibold transition-colors duration-150 ${
                     active
                       ? "text-[#0D9488] bg-white/5"
                       : "text-white/70 hover:text-white hover:bg-white/5"
