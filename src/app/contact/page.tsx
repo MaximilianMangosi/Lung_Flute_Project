@@ -6,7 +6,7 @@ import { ContactForm } from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with the Lung Flute ECO team. We welcome enquiries from clinicians, researchers, NGOs, and distributors. ",
+    "Get in touch with the Lung Flute ECO team. We welcome enquiries from clinicians, researchers, NGOs, and distributors.",
 };
 
 // TODO: replace with real contact details
