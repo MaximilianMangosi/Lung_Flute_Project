@@ -34,7 +34,21 @@ export default function TeamPage() {
       {/* Team grid */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
+          <FadeIn>
+            <div className="mb-10">
+              <p className="text-[#0D9488] font-semibold text-sm uppercase tracking-widest mb-2">
+                Meet the team
+              </p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#0A1628] mb-2">
+                The people behind Lung Flute ECO
+              </h2>
+              <p className="text-gray-500 text-base max-w-2xl">
+                A dedicated group of engineers, clinicians, and researchers
+                working together to bring affordable diagnostics to the world.
+              </p>
+            </div>
+          </FadeIn>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
             {teamMembers.map((member, i) => (
               <FadeIn key={member.id} delay={i * 0.1}>
                 <TeamCard member={member} />

@@ -1,3 +1,9 @@
+export type StudyCategory =
+  | "sputum-sampling-adults"
+  | "sputum-sampling-children"
+  | "sputum-clearance-adults"
+  | "sputum-clearance-children";
+
 export interface Study {
   id: string;
   title: string;
@@ -6,6 +12,7 @@ export interface Study {
   journal: string;
   excerpt: string;
   pdfPath: string;
+  category: StudyCategory;
 }
 
 export const studies: Study[] = [
@@ -16,8 +23,9 @@ export const studies: Study[] = [
     authors: "Fujita A, Murata K, Takamori M.",
     journal: "Respirology, 2009",
     excerpt:
-      "This preliminary trial enrolled 34 patients unable to expectorate spontaneously. Using the Lung Flute, sputum was collected from 30 of 34 patients (88%) within 10 to 20 minutes. The device enabled rapid TB diagnosis in 7 of 15 confirmed cases, including 4 patients whose smears were negative but PCR was positive, suggesting it may improve diagnostic sensitivity.",
+      "This preliminary trial enrolled 34 patients unable to expectorate spontaneously. Using the Lung Flute, sputum was collected from 30 of 34 patients (88%) within 10 to 20 minutes. The device enabled rapid Tuberculosis diagnosis in 7 of 15 confirmed cases, including 4 patients whose smears were negative but PCR was positive, suggesting it may improve diagnostic sensitivity.",
     pdfPath: "/pdfs/Respirology_Fujita_Aug2009.pdf",
+    category: "sputum-sampling-adults",
   },
   {
     id: "2",
@@ -28,6 +36,7 @@ export const studies: Study[] = [
     excerpt:
       "Presented at the European Respiratory Society Annual Congress 2012, this randomised study in paediatric community-acquired pneumonia (PCAP B and C) found that children in the Lung Flute group demonstrated significantly improved cough frequency on Day 2 and improved cough quality on Days 2 and 3. Quality of life improvements were observed on Days 1 and 2, with earlier effective sputum induction versus controls.",
     pdfPath: "/pdfs/ERS2012Poster-LF-Pediatric-Pneumonia.pdf",
+    category: "sputum-sampling-children",
   },
   {
     id: "3",
@@ -38,6 +47,7 @@ export const studies: Study[] = [
     excerpt:
       "An ERS 2012 conference poster comparing the Lung Flute with the Active Cycle of Breathing Technique (ACBT) in patients with Chronic Obstructive Pulmonary Disease. The poster presents comparative data on mucus clearance and patient usability outcomes between the two airway clearance modalities.",
     pdfPath: "/pdfs/ERS2012Poster_LFvsACBT_COPD-sm.pdf",
+    category: "sputum-clearance-adults",
   },
   {
     id: "4",
@@ -48,6 +58,7 @@ export const studies: Study[] = [
     excerpt:
       "43 stage I lung cancer patients and 47 cancer-free individuals unable to spontaneously expectorate were enrolled. The Lung Flute enabled sputum collection from 90.7% of cancer patients and 89.4% of controls. MicroRNA analysis of the collected specimens (miRs-31 and 210) showed significantly higher expression in cancer patients, with combined miRNA analysis outperforming cytology in sensitivity for lung cancer diagnosis.",
     pdfPath: "/pdfs/Lung-Cancer-sputum-qPCR_UnivMaryland_2013.pdf",
+    category: "sputum-sampling-adults",
   },
   {
     id: "5",
@@ -58,6 +69,7 @@ export const studies: Study[] = [
     excerpt:
       "This pilot study at Sydney Children's Hospital assessed the Lung Flute in children with cystic fibrosis (CF) attending an outpatient clinic who were unable to produce sputum by coughing alone. A sputum sample was obtained on 26 of 50 occasions (52%). The device transmits acoustic waves of 16-22 Hz and positive expiratory pressure, and was found to be practical for use by children in an outpatient setting.",
     pdfPath: "/pdfs/SydneyChildrens-Lung-Flute-Poster_2013.pdf",
+    category: "sputum-sampling-children",
   },
   {
     id: "6",
@@ -68,6 +80,7 @@ export const studies: Study[] = [
     excerpt:
       "A 26-week randomised controlled trial in 69 COPD patients with chronic bronchitis found that twice-daily Lung Flute use produced significant improvement in the symptom domain of the Chronic COPD Questionnaire and in health status as measured by the St. George Respiratory Questionnaire. The BODE score remained stable in the Lung Flute arm versus deterioration in controls.",
     pdfPath: "/pdfs/CTM_LungFlute_COPD26week_Sept2014-1.pdf",
+    category: "sputum-clearance-adults",
   },
   {
     id: "7",
@@ -78,6 +91,7 @@ export const studies: Study[] = [
     excerpt:
       "This University of Maryland study compared parallel sputum samples collected with and without the Lung Flute from 56 early-stage lung cancer patients and 73 controls. Former smokers who could not spontaneously expectorate were able to produce sputum using the device. Analysis of three miRNAs (miRs-21, 31, 210) yielded 83.93% sensitivity and 87.67% specificity for lung cancer identification.",
     pdfPath: "/pdfs/BiomakerInsights_LFcollected-Sputum-for-Lung-Cancer-Diagnosis_Oct2015.pdf",
+    category: "sputum-sampling-adults",
   },
   {
     id: "8",
@@ -86,8 +100,9 @@ export const studies: Study[] = [
     authors: "Sakashita K, Fujita A, Takamori M, Nagai T, Matsumoto T, Saito T, et al.",
     journal: "Clinical Respiratory Journal, 2017. DOI: 10.1111/crj.12697",
     excerpt:
-      "A multi-centre study across seven Japanese hospitals evaluated the Lung Flute as a sputum induction tool in patients with presumed pulmonary tuberculosis. The device enabled sputum collection in patients who could not spontaneously expectorate, demonstrating its clinical utility for improving the sensitivity of TB microbiological diagnosis.",
+      "A multi-centre study across seven Japanese hospitals evaluated the Lung Flute as a sputum induction tool in patients with presumed pulmonary Tuberculosis. The device enabled sputum collection in patients who could not spontaneously expectorate, demonstrating its clinical utility for improving the sensitivity of Tuberculosis microbiological diagnosis.",
     pdfPath: "/pdfs/Sakashita_CRJ_20170814.pdf",
+    category: "sputum-sampling-adults",
   },
   {
     id: "9",
@@ -96,7 +111,8 @@ export const studies: Study[] = [
     authors: "Mbuli C, Vuchas C, Konso J, et al.",
     journal: "ERJ Open Research, 2024; 10: 00902-2023",
     excerpt:
-      "A randomised crossover trial conducted across eight health facilities in Cameroon assessed whether the Lung Flute ECO assists sputum collection in people evaluated for TB. The device significantly improved adequacy of sputum volume for diagnostic testing and was well tolerated among participants aged 15 years and over, supporting its potential value at point-of-need in resource-limited settings.",
+      "A randomised crossover trial conducted across eight health facilities in Cameroon assessed whether the Lung Flute ECO assists sputum collection in people evaluated for Tuberculosis. The device significantly improved adequacy of sputum volume for diagnostic testing and was well tolerated among participants aged 15 years and over, supporting its potential value at point-of-need in resource-limited settings.",
     pdfPath: "/pdfs/LFECO_Phase1_Mbuli_2024-1.pdf",
+    category: "sputum-sampling-adults",
   },
 ];

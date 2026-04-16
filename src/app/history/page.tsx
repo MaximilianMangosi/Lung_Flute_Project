@@ -6,7 +6,7 @@ import { milestones } from "@/data/history";
 export const metadata: Metadata = {
   title: "History",
   description:
-    "The story of the Lung Flute, from its invention in 1997 to the development of the Lung Flute ECO for global TB care.",
+    "The story of the Lung Flute, from its invention in 1997 to the development of the Lung Flute ECO for global Tuberculosis care.",
 };
 
 export default function HistoryPage() {
@@ -24,7 +24,7 @@ export default function HistoryPage() {
               History
             </h1>
             <p className="text-white/65 text-lg max-w-2xl leading-relaxed">
-              From a single observation in a resource-limited TB clinic to a
+              From a single observation in a resource-limited Tuberculosis clinic to a
               from a single acoustic insight in 1997 to a device now in use across the world.
             </p>
           </FadeIn>

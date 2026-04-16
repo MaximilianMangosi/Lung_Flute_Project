@@ -32,6 +32,6 @@ export const milestones: Milestone[] = [
     year: "Ongoing",
     title: "Expanding access with the Lung Flute ECO",
     description:
-      "Because of these advantages the Lung Flute is in circulation in many countries, however its adoption remains limited in lower-income regions where tuberculosis (TB) is more common. This is largely due to the cost and resources required for production. Work is in progress to design and test more easily produceable versions of the flute that use a base of cardboard.",
+      "Because of these advantages the Lung Flute is in circulation in many countries, however its adoption remains limited in lower-income regions where Tuberculosis is more common. This is largely due to the cost and resources required for production. Work is in progress to design and test more easily produceable versions of the flute that use a base of cardboard.",
   },
 ];
